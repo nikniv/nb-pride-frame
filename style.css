@@ -1,0 +1,70 @@
+/* CSS files add styling rules to your content */
+
+body {
+  max-width: 500px;
+  margin: auto;
+  padding: 0 1em;
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-family: sans-serif;
+  color: blue;
+  font-style: italic;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+#dropbox {
+  border: grey dashed;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+#dropbox p {
+  margin: 0 0 0.5em 0;
+  font-family: sans-serif;
+}
+
+form#customize-form {
+  text-align: left;
+  margin-bottom: 1em;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-group.range-group {
+  width: 100%;
+}
+
+.input-group .range-label {
+  display: block;
+  font-weight: bold;
+  flex-basis: 100%;
+}
+
+.input-group .range-output {
+  font-family: monospace;
+  font-size: 1.3em;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+.input-group input[type="range"] {
+  flex-grow: 1;
+  margin-right: 1em;
+}
+
+#canvas {
+  width: 100%;
+}

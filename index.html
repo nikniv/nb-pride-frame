@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Non-Binary Pride Frame</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" sizes="30x30" href="https://cdn.glitch.com/ad8783fb-63f6-4b55-ae39-13ab14500aaa%2F93562f86d4c8fdfb.png?1528268349397">
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Ensure that the client is viewing the page over HTTPS -->
+  <script src="/httpsRedirect.js"></script>
+
+  <!-- Image loading library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-load-image/2.19.0/load-image.all.min.js" integrity="sha256-xykpWcYP7R0aHslcmDpt6cFDtt/aMQWzs+wplY25UCc="
+    crossorigin="anonymous"></script>
+
+  <!-- Image saving library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js" integrity="sha256-FPJJt8nA+xL4RU6/gsriA8p8xAeLGatoyTjldvQKGdE="
+    crossorigin="anonymous"></script>
+
+  <!-- import the webpage's javascript file -->
+  <script src="/script.js" defer></script>
+  
+  <!-- add Glitch links to the footer -->
+  <script src="/glitchFooterLinks.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Happy Pride Month!</h1>
+  </header>
+  <main>
+    <section>
+      <p>You can use this webapp to add a circular non-binary pride frame to a profile picture. Works best with square pictures!</p>
+      <p>Once you're satisfied with the frame, click or tap the picture to save it.</p>
+      <p>Remixed from <a href="https://trans-pride-frame.glitch.me/">trans-pride-frame</a> by <a href="https://twitter.com/noahdleigh">Noelle Leigh</a></p>
+    </section>
+    <section>
+      <div id="dropbox">
+        <p>Drop your picture here, or</p>
+        <input type="file" id="input" accept="image/*">
+      </div>
+      <form id="customize-form" style="display:none">
+        <div class="input-group">
+          <label for="range-stroke" class="range-label">Frame Thickness</label>
+          <div class="input-group range-group">
+            <input type="range" name="stroke" id="range-stroke" min="1" max="200" step="1" value="20">
+            <output name="stroke-output" for="range-stroke" id="stroke-output" form="customize-form" class="range-output">20 px</output>
+          </div>
+        </div>
+      </form>
+      <canvas id="canvas" height="10">Sorry, you need a browser that supports the
+        <code>&lt;canvas&gt;</code> element.</canvas>
+    </section>
+  </main>
+  <footer>
+  </footer>
+</body>
+
+</html>
